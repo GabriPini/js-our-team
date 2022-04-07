@@ -1,4 +1,6 @@
 
+const memeberOnPage =  document.querySelector('.members')
+const addButton = document.querySelector('.btn')
 
 
 const team = [
@@ -35,13 +37,45 @@ const team = [
 ];
 
 for (let i  = 0 ; i < team.length ; i++) {
-
+    
+    const memberpage = document.createElement(`div`);
     const member = team[i];
-
+    memberpage.innerHTML =
+    `
+    <img src="assets/img/${ member.image}" alt="">
+    
+    <h1> ${ member.name} </h1>
+    
+    <h3>${ member.role}  </h3> 
+    `;
+    
+    memberpage.classList.add(`infos`, `card`, `text-center`, `mt-5`, )
+    memeberOnPage.append(memberpage)
+    
+    
+    
     console.log(member.name);
     console.log(member.role);
     console.log(member.image);
     console.log('_____________________');
-  }
-  console.log (team)
-  
+    
+}
+console.log (team)
+
+
+
+
+//prove per aggiugere qualcuno(still working on it )
+/* addButton.addEventListener('click', function () {
+
+    team.push({ //Dare la possibilità all’utente di aggiungere un membro 
+
+        name : document.getElementById('name').value ,
+        role :  document.getElementById('role').value ,
+        image :  document.getElementById('img').value 
+    
+    })
+
+    
+    
+})  */
