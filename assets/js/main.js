@@ -44,12 +44,12 @@ for (let i  = 0 ; i < team.length ; i++) {
     `
     <img src="assets/img/${ member.image}" alt="">
     
-    <h1> ${ member.name} </h1>
+    <h2> ${ member.name} </h2>
     
-    <h3>${ member.role}  </h3> 
+    <h4>${ member.role}  </h4> 
     `;
     
-    memberpage.classList.add(`infos`, `card`, `text-center`, `mt-5`, )
+    memberpage.classList.add( `card`, `text-center`, `mt-5`, )
     memeberOnPage.append(memberpage)
     
     
@@ -75,7 +75,21 @@ console.log (team)
         image :  document.getElementById('img').value 
     
     })
+    for (let i  = 0 ; i < team.length ; i++) {
+    const memberpage = document.createElement(`div`);
+    const member = team[i];
+    memberpage.innerHTML =
+    ` 
+    <img src="assets/img/${ member.image}" alt="">
 
+    <h1> ${ member.name} </h1>
     
+    <h3>${ member.role}  </h3> 
+    `;
+
+    memberpage.classList.add( `card`, `text-center`, `mt-5`, )
+    memeberOnPage.append(memberpage)
+    }
+    console.log(team)
     
 })  */
